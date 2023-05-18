@@ -1,0 +1,155 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+header {
+	background-color: #333;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 999;
+}
+
+.logo {
+	font-size: 2rem;
+	margin: 0;
+}
+
+nav {
+	display: inline-block;
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+nav li {
+	display: inline-block;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	display: block;
+	padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+section {
+	margin: 4rem 0;
+}
+
+section h2 {
+	margin: 0;
+}
+
+.services-list {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.services-list li {
+	margin-bottom: 0.5rem;
+}
+
+form label {
+	display: block;
+	margin-bottom: 0.5rem;
+}
+
+form input,
+form textarea {
+	width: 100%;
+	padding: 0.5rem;
+	margin-bottom: 1rem;
+	border: 1px solid #333;
+}
+
+form button {
+	background-color: #333;
+	color: #fff;
+	border: none;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+}
+
+form button:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+footer {
+	background-color: #333;
+	color: #fff;
+	padding: 1rem;
+	text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+	header {
+		position: relative;
+	}
+
+	.logo {
+		font-size: 1.5rem;
+	}
+
+	nav {
+		display: block;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		width: 100%;
+		background-color: #333;
+		opacity: 0.95;
+		visibility: hidden;
+		transition: visibility 0s linear 0.5s, opacity 0.5s;
+	}
+
+	nav ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	nav li {
+		display: block;
+	}
+
+	nav a {
+		display: block;
+		padding: 1rem;
+	}
+
+	nav a:hover {
+		background-color: #fff;
+		color: #333;
+	}
+
+	nav.show {
+		visibility: visible;
+		opacity: 1;
+		transition-delay: 0s;
+	}
+}
